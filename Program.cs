@@ -11,8 +11,7 @@ namespace Homework_5_Source_Task_3
         /// <param name="Source">исходная строка текста</param>
         static void RemoveDoubles(string Source)
         {
-            char[] arr = new char[Source.Length];
-            arr = Source.ToCharArray(0, Source.Length);
+            char[] arr = Source.ToCharArray(0, Source.Length);
             char[] arr1 = arr.Distinct().ToArray();
             for (int i = 0; i < arr1.Length; i++)
             {
@@ -28,7 +27,7 @@ namespace Homework_5_Source_Task_3
             Console.WriteLine("Задание 3. Создать метод, принимающий текст и удаляющий повторные символы в строке.\n");
             Console.ResetColor();
             Console.WriteLine("Введите предложение\n");
-            string str = Console.ReadLine();
+             
             Console.WriteLine("Результат:\n");
             RemoveDoubles(str);
 

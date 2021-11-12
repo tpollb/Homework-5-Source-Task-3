@@ -27,6 +27,7 @@ namespace Homework_5_Source_Task_3
             Console.WriteLine("Задание 3. Создать метод, принимающий текст и удаляющий повторные символы в строке.\n");
             Console.ResetColor();
             Console.WriteLine("Введите предложение\n");
+            string str = Console.ReadLine();
              
             Console.WriteLine("Результат:\n");
             RemoveDoubles(str);

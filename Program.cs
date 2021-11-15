@@ -9,16 +9,15 @@ namespace Homework_5_Source_Task_3
         /// метод, принимающий текст и удаляющий повторные символы в строке.
         /// </summary>
         /// <param name="Source">исходная строка текста</param>
-        static void RemoveDoubles(string Source)
+        static char[] RemoveDoubles(string Source)
         {
             char[] arr = Source.ToCharArray(0, Source.Length);
             char[] arr1 = arr.Distinct().ToArray();
-            for (int i = 0; i < arr1.Length; i++)
-            {
-                Console.Write(arr1[i]);
-            }
+            return arr1;
         }
-        static void Main(string[] args)
+
+        
+    static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Тема 5. Домашнее задание.\n");
@@ -30,7 +29,13 @@ namespace Homework_5_Source_Task_3
             string str = Console.ReadLine();
              
             Console.WriteLine("Результат:\n");
-            RemoveDoubles(str);
+            
+            char[] Source = RemoveDoubles(str);
+
+            for (int i = 0; i < Source.Length; i++)
+            {
+                Console.Write(Source[i]);
+            }
 
             Console.ReadLine();
         }

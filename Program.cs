@@ -11,7 +11,8 @@ namespace Homework_5_Source_Task_3
         /// <param name="Source">исходная строка текста</param>
         static char[] RemoveDoubles(string Source)
         {
-            char[] arr = Source.ToCharArray(0, Source.Length);
+            var strWithoutSpaces = Source.Replace(" ", "");
+            char[] arr = strWithoutSpaces.ToCharArray(0, strWithoutSpaces.Length);
             char[] arr1 = arr.Distinct().ToArray();
             return arr1;
         }
@@ -27,7 +28,7 @@ namespace Homework_5_Source_Task_3
             Console.ResetColor();
             Console.WriteLine("Введите предложение\n");
             string str = Console.ReadLine();
-             
+
             Console.WriteLine("Результат:\n");
             
             char[] Source = RemoveDoubles(str);
